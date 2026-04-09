@@ -5,7 +5,11 @@ from sqlalchemy.ext.asyncio import create_async_engine
 
 from llm_wiki.config import settings
 from llm_wiki.db.base import Base
-from llm_wiki.db.models import Source, Document, Chunk  # noqa: F401
+from llm_wiki.db.models import (  # noqa: F401
+    Source, Document, Chunk,
+    Entity, Claim, WikiEntry, ThoughtEntry,
+    Citation, Link,
+)
 
 target_metadata = Base.metadata
 

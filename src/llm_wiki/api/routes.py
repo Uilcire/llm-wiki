@@ -8,6 +8,7 @@ from llm_wiki.modules.chunking.service import chunk_text
 from llm_wiki.modules.embedding.service import generate_embeddings
 from llm_wiki.modules.retrieval.service import search_chunks
 from llm_wiki.modules.answer.service import generate_answer
+from llm_wiki.modules.extraction.service import extract_from_source
 
 router = APIRouter()
 
@@ -67,3 +68,9 @@ async def ask(q: str, session: AsyncSession = Depends(get_session)):
     chunks = await search_chunks(q, session)
     raw_answer = await generate_answer(q, chunks)
     return AnswerResponse(query=q, **raw_answer)
+
+
+@router.post("/sources/{source_id}/extract")
+async def extract(source_id: int, session: AsyncSession = Depends(get_session)):
+    result = await extract_from_source(source_id, session)
+    return result
