@@ -1,0 +1,247 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 200px;
+  background: #1a1a2e;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.sidebar a {
+  color: #aaa;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.sidebar a.active {
+  background: #333;
+  color: #fff;
+}
+
+/* ── Main content ── */
+.content {
+  flex: 1;
+  padding: 32px;
+  max-width: 800px;
+}
+
+.page h1 {
+  margin-bottom: 20px;
+}
+
+/* ── Search bar ── */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.search-bar button, .ingest-form button {
+  padding: 10px 20px;
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-bar button:disabled, .ingest-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Answer card ── */
+.answer-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.answer-card section {
+  margin-bottom: 16px;
+}
+
+.answer-card h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.answer-card h3 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.answer-card ul {
+  padding-left: 20px;
+}
+
+.answer-card li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.evidence {
+  color: #2d6a4f;
+  font-style: italic;
+}
+
+.citation {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.chunk-badge {
+  background: #e0e0e0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.source-badge {
+  background: #e8f4e8;
+  color: #2d6a4f;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.quote {
+  color: #555;
+  font-style: italic;
+}
+
+.uncertainty {
+  color: #d35400;
+  font-style: italic;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab.active {
+  background: #1a1a2e;
+  color: #fff;
+  border-color: #1a1a2e;
+}
+
+/* ── Data list ── */
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.card p {
+  width: 100%;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.badge {
+  background: #e8f4f8;
+  color: #1a6d8a;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.aliases {
+  color: #888;
+  font-size: 13px;
+}
+
+.meta {
+  color: #888;
+  font-size: 13px;
+}
+
+.empty {
+  color: #999;
+  font-style: italic;
+}
+
+/* ── Ingest form ── */
+.ingest-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ingest-form input {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.ingest-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.status-box {
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  font-size: 14px;
+}
